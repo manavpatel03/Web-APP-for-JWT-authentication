@@ -17,13 +17,65 @@
     border-color: black;
 
 }
+#light .special {
+    background-color: #e6f7ff;
+}
 #dark {
     background-color: #21252B;
     accent-color: #64B5F6;
     color: #F5F5F5;
 }
+#dark .special {
+    background-color: #062a4f;
+}
 #dark .no_change {
     background-color: #4C4F52;
     color: #d3d3d3;
     border-color: white;
+}
+.block   {
+     position: relative;
+     margin: 10% auto 0;
+     width: 50%;
+     height: 400px;
+     background: linear-gradient(0deg , black , rgb(51, 50, 50));
+}
+.glow::before , .glow::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: linear-gradient(45 deg, #e6fb04,#ff6600, #00ff66 , #00ffff ,#ff00ff,#ff0099,#6e0dd0, #ff3300,#099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: 20s linear infinite;
+
+     
+     
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+}
+
+.glow::after{
+    filter: blur(40px);
+    opacity: 0.5;
+    
+}
+
+.whole {
+    margin: 0;
+    padding: 0;
 }

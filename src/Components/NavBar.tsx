@@ -35,7 +35,7 @@ export function NavBar() {
                     setx(1);
                   }}
                   aria-current="page"
-                  href="#"
+                  href="index_signup.html"
                 >
                   Sign Up
                 </a>
@@ -43,7 +43,7 @@ export function NavBar() {
               <li className="nav-item">
                 <a
                   className={x == 0 ? "nav-link active" : "nav-link"}
-                  href="#"
+                  href="index.html"
                   onClick={() => {
                     setx(0);
                   }}
